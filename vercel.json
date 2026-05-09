@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "src": "/api/proxy", "destination": "/api/index" }
+  ]
+}
