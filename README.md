@@ -1,13 +1,17 @@
 # FQMSystem API Proxy
 
-部署在 Render 的 API 代理服务，供 FQMSystem 后端调用国内财经 API。
+Vercel-deployed API proxy for FQMSystem, accessible from mainland China.
 
-## API 端点
+## API Endpoints
 
-- `GET /api/eastmoney/quote?codes=1.600519` - 东方财富实时行情
-- `GET /api/sina/quote?symbol=sh600519` - 新浪财经行情
-- `GET /health` - 健康检查
+```
+GET /api/index?type=eastmoney&codes=000001,600000
+GET /api/index?type=sina&symbols=000001,600000
+GET /api/index?type=xueqiu&symbol=000001
+```
 
-## 部署
+## Deploy
 
-自动部署到 Render.com，请访问 https://dashboard.render.com
+1. Import this repo to Vercel
+2. Deploy — no env vars needed
+3. Update FQMSystem backend proxy URL
